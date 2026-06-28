@@ -1,0 +1,165 @@
+object frmPesquisaClientes: TfrmPesquisaClientes
+  Left = 0
+  Top = 0
+  Caption = 'Pesquisa de Clientes'
+  ClientHeight = 540
+  ClientWidth = 1164
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lytFundo: TLayout
+    Align = Client
+    Size.Width = 1164.000000000000000000
+    Size.Height = 540.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctFundo: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 1164.000000000000000000
+      Size.Height = 540.000000000000000000
+      Size.PlatformDefault = False
+      object lytTopo: TLayout
+        Align = Top
+        Size.Width = 1164.000000000000000000
+        Size.Height = 81.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtBusca: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 56.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 425.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Digite o Nome, CNPJ ou ID e pressione Enter...'
+          KillFocusByReturn = True
+          OnKeyDown = edtBuscaKeyDown
+        end
+        object btnPesquisar: TSpeedButton
+          Position.X = 489.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 25.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'searchtoolbutton'
+          TextSettings.Trimming = None
+          OnClick = btnPesquisarClick
+        end
+      end
+      object lytBotoes: TLayout
+        Align = Bottom
+        Position.Y = 490.000000000000000000
+        Size.Width = 1164.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnSelecionar: TButton
+          Position.X = 104.000000000000000000
+          Position.Y = 8.000000000000000000
+          StyleLookup = 'transparentcirclebuttonstyle'
+          TabOrder = 0
+          Text = 'Selecionar'
+          TextSettings.Trimming = None
+        end
+        object lytBtnGravar: TLayout
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 100.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object rctBtnGravar: TRectangle
+            Align = Client
+            Fill.Color = xF72B3F8E
+            Size.Width = 100.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object lblBtnGravar: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              HitTest = True
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Gravar'
+              TabOrder = 0
+              OnClick = lblBtnGravarClick
+            end
+          end
+        end
+        object lytBtnCancelar: TLayout
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 500.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object rctBtnCancelar: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Size.Width = 100.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xF72B3F8E
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object lblBtnCancelar: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              HitTest = True
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xF72B3F8E
+              TextSettings.HorzAlign = Center
+              Text = 'Cancelar'
+              TabOrder = 0
+              OnClick = lblBtnCancelarClick
+            end
+          end
+        end
+      end
+      object lytResultados: TLayout
+        Align = Client
+        Size.Width = 1164.000000000000000000
+        Size.Height = 409.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object lstResultados: TListView
+          ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+          ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 1144.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnDblClick = lstResultadosDblClick
+        end
+      end
+    end
+  end
+end

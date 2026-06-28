@@ -1,0 +1,76 @@
+inherited frmCadastroProdutos: TfrmCadastroProdutos
+  inherited lytFundo: TLayout
+    inherited rctFundo: TRectangle
+      inherited lytTituloTela: TLayout
+        inherited rctTituloJanela: TRectangle
+          inherited lblTituloTela: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+      inherited lytCentro: TLayout
+        inherited tbcCampos: TTabControl
+          Sizes = (
+            1012s
+            412s
+            1012s
+            412s)
+          inherited tbiCadastro: TTabItem
+            Size.Width = 67.000000000000000000
+            Size.Height = 26.000000000000000000
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiCadastro: TRectangle
+              Size.Height = 362.000000000000000000
+            end
+            inherited lytBotoes: TLayout
+              Position.Y = 362.000000000000000000
+              inherited rctBotoes: TRectangle
+                inherited lytBtnGravar: TLayout
+                  inherited rctBtnGravar: TRectangle
+                    inherited lblBtnGravar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+                inherited lytBtnCancelar: TLayout
+                  inherited rctBtnCancelar: TRectangle
+                    inherited lblBtnCancelar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+                inherited lytBtnExcluir: TLayout
+                  inherited rctBtnExcluir: TRectangle
+                    inherited lblBtnExcluir: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+                inherited lytBtnFechar: TLayout
+                  inherited rctBtnFechar: TRectangle
+                    inherited lblBtnFechar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+            end
+          end
+          inherited tbiListagem: TTabItem
+            Size.Width = 68.000000000000000000
+            Size.Height = 26.000000000000000000
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiListagem: TRectangle
+              Size.Height = 412.000000000000000000
+              inherited lstListagem: TListView
+                Size.Height = 412.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

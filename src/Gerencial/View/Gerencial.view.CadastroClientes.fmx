@@ -1,0 +1,337 @@
+inherited frmCadastroClientes: TfrmCadastroClientes
+  Caption = 'Cadastro de Clientes'
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited lytFundo: TLayout
+    inherited rctFundo: TRectangle
+      inherited lytTituloTela: TLayout
+        inherited rctTituloJanela: TRectangle
+          inherited lblTituloTela: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            Text = 'Cadastro de Clientes'
+          end
+        end
+      end
+      inherited lytCentro: TLayout
+        inherited tbcCampos: TTabControl
+          Sizes = (
+            1012s
+            412s
+            1012s
+            412s)
+          inherited tbiCadastro: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiCadastro: TRectangle
+              inherited lytCamposCadastro: TLayout
+                object edtRazaoSocial: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 0
+                  Position.X = 8.000000000000000000
+                  Position.Y = 64.000000000000000000
+                  Size.Width = 376.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  OnExit = edtRazaoSocialExit
+                end
+                object lblRazaoSocial: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 48.000000000000000000
+                  Text = 'Raz'#227'o Social'
+                  TabOrder = 18
+                end
+                object edtNomeFantasia: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 1
+                  Position.X = 392.000000000000000000
+                  Position.Y = 64.000000000000000000
+                  Size.Width = 377.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblNomeFantasia: TLabel
+                  Position.X = 392.000000000000000000
+                  Position.Y = 48.000000000000000000
+                  Size.Width = 233.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Nome Fantasia'
+                  TabOrder = 17
+                end
+                object edtCpfCnpj: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 3
+                  MaxLength = 14
+                  Position.X = 144.000000000000000000
+                  Position.Y = 110.000000000000000000
+                  Size.Width = 153.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'CPF/CNPJ'
+                  Caret.Color = claRed
+                  OnExit = edtCpfCnpjExit
+                end
+                object lblCpfCnpj: TLabel
+                  Position.X = 144.000000000000000000
+                  Position.Y = 94.000000000000000000
+                  Text = 'Cpf / Cnpj'
+                  TabOrder = 16
+                end
+                object edtRgIe: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 4
+                  Position.X = 305.000000000000000000
+                  Position.Y = 110.000000000000000000
+                  Size.Width = 160.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'RG/I.E.'
+                end
+                object lblRgIe: TLabel
+                  Position.X = 305.000000000000000000
+                  Position.Y = 94.000000000000000000
+                  Text = 'Rg/I.E.'
+                  TabOrder = 15
+                end
+                object lbl2: TLabel
+                  Position.X = 7.000000000000000000
+                  Position.Y = 94.000000000000000000
+                  Text = 'Tipo de Pessoa'
+                  TabOrder = 19
+                end
+                object cbbTipoPessoa: TComboBox
+                  Items.Strings = (
+                    'F'#237'sica'
+                    'Jur'#237'dica')
+                  Position.X = 8.000000000000000000
+                  Position.Y = 110.000000000000000000
+                  Size.Width = 128.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  OnChange = cbbTipoPessoaClosePopup
+                  OnClosePopup = cbbTipoPessoaClosePopup
+                end
+                object swtStatus: TSwitch
+                  IsChecked = True
+                  Position.X = 866.000000000000000000
+                  Position.Y = 23.000000000000000000
+                  Size.Width = 46.000000000000000000
+                  Size.Height = 24.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 20
+                end
+                object lbl1: TLabel
+                  Position.X = 866.000000000000000000
+                  Position.Y = 8.000000000000000000
+                  Size.Width = 48.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Status'
+                  TabOrder = 21
+                end
+                object lblEmail: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 278.000000000000000000
+                  Text = 'E-mail'
+                end
+                object edtEmail: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 13
+                  Position.X = 8.000000000000000000
+                  Position.Y = 294.000000000000000000
+                  Size.Width = 376.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblTelefone: TLabel
+                  Position.X = 392.000000000000000000
+                  Position.Y = 278.000000000000000000
+                  Text = 'Telefone'
+                end
+                object edtTelefone: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 14
+                  Position.X = 392.000000000000000000
+                  Position.Y = 294.000000000000000000
+                  Size.Width = 150.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblCep: TLabel
+                  Position.X = 606.000000000000000000
+                  Position.Y = 140.000000000000000000
+                  Text = 'CEP'
+                end
+                object edtCep: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 7
+                  Position.X = 606.000000000000000000
+                  Position.Y = 156.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblEndereco: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 140.000000000000000000
+                  Text = 'Endere'#231'o'
+                end
+                object edtEndereco: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 5
+                  Position.X = 8.000000000000000000
+                  Position.Y = 156.000000000000000000
+                  Size.Width = 500.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblNumero: TLabel
+                  Position.X = 516.000000000000000000
+                  Position.Y = 140.000000000000000000
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'N'#250'mero'
+                end
+                object edtNumero: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 6
+                  Position.X = 516.000000000000000000
+                  Position.Y = 156.000000000000000000
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblBairro: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 186.000000000000000000
+                  Text = 'Bairro'
+                end
+                object edtBairro: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 8
+                  Position.X = 8.000000000000000000
+                  Position.Y = 202.000000000000000000
+                  Size.Width = 200.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblCidade: TLabel
+                  Position.X = 216.000000000000000000
+                  Position.Y = 186.000000000000000000
+                  Text = 'Cidade'
+                end
+                object edtCidade: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 9
+                  Position.X = 216.000000000000000000
+                  Position.Y = 202.000000000000000000
+                  Size.Width = 250.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblUf: TLabel
+                  Position.X = 474.000000000000000000
+                  Position.Y = 186.000000000000000000
+                  Size.Width = 34.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'UF'
+                end
+                object edtUf: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 10
+                  Position.X = 474.000000000000000000
+                  Position.Y = 202.000000000000000000
+                  Size.Width = 40.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblObservacoes: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 232.000000000000000000
+                  Text = 'Observa'#231#245'es'
+                end
+                object edtObservacoes: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 12
+                  Position.X = 8.000000000000000000
+                  Position.Y = 248.000000000000000000
+                  Size.Width = 761.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lbl3: TLabel
+                  Position.X = 522.000000000000000000
+                  Position.Y = 186.000000000000000000
+                  Size.Width = 87.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Complemento'
+                  TabOrder = 22
+                end
+                object edtComplemento: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 11
+                  Position.X = 522.000000000000000000
+                  Position.Y = 202.000000000000000000
+                  TextPrompt = 'Complemento'
+                end
+                object lblID: TLabel
+                  StyledSettings = [Family, Size, FontColor]
+                  Position.X = 8.000000000000000000
+                  Position.Y = 23.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'ID:'
+                  TabOrder = 23
+                end
+              end
+            end
+            inherited lytBotoes: TLayout
+              inherited rctBotoes: TRectangle
+                inherited lytBtnGravar: TLayout
+                  Anchors = []
+                  inherited rctBtnGravar: TRectangle
+                    inherited lblBtnGravar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnGravarClick
+                    end
+                  end
+                end
+                inherited lytBtnCancelar: TLayout
+                  Anchors = []
+                  inherited rctBtnCancelar: TRectangle
+                    inherited lblBtnCancelar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnCancelarClick
+                    end
+                  end
+                end
+                inherited lytBtnFechar: TLayout
+                  Anchors = []
+                  inherited rctBtnFechar: TRectangle
+                    inherited lblBtnFechar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+            end
+          end
+          inherited tbiListagem: TTabItem
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiListagem: TRectangle
+              inherited lstListagem: TListView
+                OnDblClick = lstListagemDblClick
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,12 @@
+CREATE TABLE intellisoft_erp.participantes (
+	id INTEGER auto_increment NOT NULL,
+	razao_social varchar(100) NOT NULL,
+	nome_fantasia varchar(100) NULL,
+	cpf_cnpj varchar(15) NOT NULL,
+	status varchar(1) DEFAULT 'A' NOT NULL,
+	CONSTRAINT participantes_pk PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+

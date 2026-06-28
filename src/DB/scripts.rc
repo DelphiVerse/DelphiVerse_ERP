@@ -1,0 +1,1 @@
+MIGRATION_001 SQL "sql/001_setup_inicial.sql"

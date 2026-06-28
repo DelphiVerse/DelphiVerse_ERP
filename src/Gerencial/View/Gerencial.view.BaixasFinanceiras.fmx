@@ -1,0 +1,387 @@
+object frmBaixasFinanceiras: TfrmBaixasFinanceiras
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = Single
+  Caption = 'Baixa do Lan'#231'amento Financeiro'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lytFundo: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctFundo: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 640.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      object lytTituloTela: TLayout
+        Align = Top
+        Size.Width = 640.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object rctTituloJanela: TRectangle
+          Align = Client
+          Fill.Color = xFF5A0001
+          Size.Width = 640.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblTituloTela: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 640.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Baixa do Lan'#231'amento Financeiro'
+            TabOrder = 0
+          end
+        end
+      end
+      object lytCentro: TLayout
+        Align = Client
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 30.000000000000000000
+        Margins.Right = 30.000000000000000000
+        Margins.Bottom = 30.000000000000000000
+        Size.Width = 580.000000000000000000
+        Size.Height = 320.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object lytCampos: TLayout
+          Align = Client
+          Size.Width = 580.000000000000000000
+          Size.Height = 168.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object edtSaldo: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            ReadOnly = True
+            MaxLength = 15
+            FilterChar = '1234567890,.R$ '
+            Position.X = 8.000000000000000000
+            Position.Y = 24.000000000000000000
+          end
+          object lbl1: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Saldo'
+            TabOrder = 9
+          end
+          object edtDataBaixa: TDateEdit
+            Date = 46200.000000000000000000
+            IsEmpty = True
+            Position.X = 116.000000000000000000
+            Position.Y = 24.000000000000000000
+            TabOrder = 10
+          end
+          object lbl3: TLabel
+            Position.X = 116.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Data da Baixa'
+            TabOrder = 11
+          end
+          object edtValorMulta: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Position.X = 224.000000000000000000
+            Position.Y = 24.000000000000000000
+          end
+          object Label1: TLabel
+            Position.X = 224.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Multa'
+            TabOrder = 7
+          end
+          object edtValorJuros: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 4
+            Position.X = 332.000000000000000000
+            Position.Y = 24.000000000000000000
+          end
+          object Label2: TLabel
+            Position.X = 332.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Juros'
+            TabOrder = 5
+          end
+          object edtValorDesconto: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 2
+            Position.X = 440.000000000000000000
+            Position.Y = 24.000000000000000000
+          end
+          object Label3: TLabel
+            Position.X = 440.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Desconto'
+            TabOrder = 3
+          end
+          object edtValorPago: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 0
+            Position.X = 8.000000000000000000
+            Position.Y = 72.000000000000000000
+          end
+          object Label4: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 56.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Valor Pago'
+            TabOrder = 1
+          end
+          object pbxFormaPagamento: TPopupBox
+            Hint = 'Seleciona a forma de pagamento...'
+            Items.Strings = (
+              'DINHEIRO'
+              'PIX'
+              'TRANSFER'#202'NCIA'
+              'BOLETO'
+              'CARTAO DE CR'#201'DITO'
+              'CARTAO DE D'#201'BITO'
+              'CHEQUE'
+              'OUTROS')
+            Position.X = 116.000000000000000000
+            Position.Y = 72.000000000000000000
+            Size.Width = 157.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 12
+            ParentShowHint = False
+            ShowHint = True
+          end
+          object lbl4: TLabel
+            Position.X = 116.000000000000000000
+            Position.Y = 56.000000000000000000
+            Text = 'Forma de Pagamento'
+            TabOrder = 13
+          end
+        end
+        object lytListagem: TLayout
+          Align = Bottom
+          Position.Y = 168.000000000000000000
+          Size.Width = 580.000000000000000000
+          Size.Height = 152.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object lstBaixas: TListView
+            ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+            ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            AlternatingColors = True
+            Align = Client
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 4.000000000000000000
+            Size.Width = 572.000000000000000000
+            Size.Height = 119.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            ItemAppearanceObjects.ItemObjects.Accessory.AccessoryType = Detail
+            OnItemClickEx = lstBaixasItemClickEx
+          end
+          object lytBarraTituloListagem: TLayout
+            Align = Top
+            Size.Width = 580.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object rctBarraTituloListagem: TRectangle
+              Align = Client
+              Fill.Color = xFF5A0001
+              Size.Width = 580.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              object lbl2: TLabel
+                Align = Client
+                StyledSettings = [Family, Size]
+                Size.Width = 580.000000000000000000
+                Size.Height = 25.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Listagem de Baixas'
+                TabOrder = 0
+              end
+            end
+          end
+        end
+      end
+      object lytBotoes: TLayout
+        Align = Bottom
+        Position.Y = 430.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object rctBotoes: TRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Size.Width = 640.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object lytBtnGravar: TLayout
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object rctBtnGravar: TRectangle
+              Align = Client
+              Fill.Color = xFF5A0001
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              object lblBtnGravar: TLabel
+                Align = Client
+                StyledSettings = [Family]
+                HitTest = True
+                Size.Width = 100.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Gravar'
+                TabOrder = 0
+                OnClick = lblBtnGravarClick
+              end
+            end
+          end
+          object lytBtnCancelar: TLayout
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 110.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object rctBtnCancelar: TRectangle
+              Align = Client
+              Fill.Color = claWhite
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF5A0001
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              object lblBtnCancelar: TLabel
+                Align = Client
+                StyledSettings = [Family]
+                HitTest = True
+                Size.Width = 100.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF5A0001
+                TextSettings.HorzAlign = Center
+                Text = 'Cancelar'
+                TabOrder = 0
+                OnClick = lblBtnCancelarClick
+              end
+            end
+          end
+          object lytBtnFechar: TLayout
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 215.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object rctBtnFechar: TRectangle
+              Align = Client
+              Fill.Color = claWhite
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF5A0001
+              XRadius = 10.000000000000000000
+              YRadius = 10.000000000000000000
+              object lblBtnFechar: TLabel
+                Align = Client
+                StyledSettings = [Family]
+                HitTest = True
+                Size.Width = 100.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF5A0001
+                TextSettings.HorzAlign = Center
+                Text = 'Fechar'
+                TabOrder = 0
+                OnClick = lblBtnFecharClick
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppmOpcoes: TPopupMenu
+    Left = 528
+    Top = 328
+    object mniAlterar: TMenuItem
+      Text = 'Alterar'
+      OnClick = mniAlterarClick
+    end
+    object mniExcluir: TMenuItem
+      Text = 'Excluir'
+      OnClick = mniExcluirClick
+    end
+  end
+end

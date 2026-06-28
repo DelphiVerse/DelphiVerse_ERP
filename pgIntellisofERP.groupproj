@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5029E999-6CAE-4840-897D-F6BAAD531AF6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="src\Desktop\DelphiVerseERP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\Gerencial\View\GIL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\Server\srvDelphiVerse_ERP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\Gerencial\Server\srvDelphiVerse_GIL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiVerseERP">
+        <MSBuild Projects="src\Desktop\DelphiVerseERP.dproj"/>
+    </Target>
+    <Target Name="DelphiVerseERP:Clean">
+        <MSBuild Projects="src\Desktop\DelphiVerseERP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVerseERP:Make">
+        <MSBuild Projects="src\Desktop\DelphiVerseERP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GIL">
+        <MSBuild Projects="src\Gerencial\View\GIL.dproj"/>
+    </Target>
+    <Target Name="GIL:Clean">
+        <MSBuild Projects="src\Gerencial\View\GIL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GIL:Make">
+        <MSBuild Projects="src\Gerencial\View\GIL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="srvDelphiVerse_ERP">
+        <MSBuild Projects="src\Server\srvDelphiVerse_ERP.dproj"/>
+    </Target>
+    <Target Name="srvDelphiVerse_ERP:Clean">
+        <MSBuild Projects="src\Server\srvDelphiVerse_ERP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="srvDelphiVerse_ERP:Make">
+        <MSBuild Projects="src\Server\srvDelphiVerse_ERP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="srvDelphiVerse_GIL">
+        <MSBuild Projects="src\Gerencial\Server\srvDelphiVerse_GIL.dproj"/>
+    </Target>
+    <Target Name="srvDelphiVerse_GIL:Clean">
+        <MSBuild Projects="src\Gerencial\Server\srvDelphiVerse_GIL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="srvDelphiVerse_GIL:Make">
+        <MSBuild Projects="src\Gerencial\Server\srvDelphiVerse_GIL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiVerseERP;GIL;srvDelphiVerse_ERP;srvDelphiVerse_GIL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiVerseERP:Clean;GIL:Clean;srvDelphiVerse_ERP:Clean;srvDelphiVerse_GIL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiVerseERP:Make;GIL:Make;srvDelphiVerse_ERP:Make;srvDelphiVerse_GIL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

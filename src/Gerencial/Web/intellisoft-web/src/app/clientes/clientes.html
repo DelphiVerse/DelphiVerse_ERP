@@ -1,0 +1,166 @@
+<div class="layout-container">
+  <aside class="sidebar">
+    <div class="logo-area">
+      <img src="assets/intellisoft-logo.png" alt="Intellisoft" class="logo" />
+    </div>
+    <nav class="menu">
+      <button class="menu-item active">Clientes</button>
+      <button class="menu-item">Licenças</button>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <h1>GIL - Gestão Interna de Licenças</h1>
+    </header>
+
+    <div class="content-area">
+      <div class="content-header">
+        <h2>Cadastro de Clientes</h2>
+      </div>
+
+      <div class="tabs">
+        <button [class.active]="abaAtiva === 'cadastro'" (click)="alternarAba('cadastro')">Cadastro</button>
+        <button [class.active]="abaAtiva === 'listagem'" (click)="alternarAba('listagem')">Listagem</button>
+      </div>
+
+      <div class="form-container" *ngIf="abaAtiva === 'cadastro'">
+        <form [formGroup]="clienteForm">
+          
+          <div class="form-row status-row">
+            <div class="field-group id-field">
+              <label>ID:</label>
+              <span>{{ clienteForm.get('id')?.value || 'Novo' }}</span>
+            </div>
+            <div class="field-group toggle-field">
+              <label>Status</label>
+              <label class="switch">
+                <input type="checkbox" formControlName="status">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row grid-2">
+            <div class="field-group">
+              <label>Nome</label>
+              <input type="text" formControlName="nome" placeholder="Nome">
+            </div>
+            <div class="field-group">
+              <label>Nome Fantasia (Apelido)</label>
+              <input type="text" formControlName="nomeFantasia" placeholder="Nome Fantasia (Apelido)">
+            </div>
+          </div>
+
+          <div class="form-row grid-docs">
+            <div class="field-group">
+              <label>Tipo de Pessoa</label>
+              <select formControlName="tipoPessoa">
+                <option value="Física">Física</option>
+                <option value="Jurídica">Jurídica</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>CPF</label>
+              <input type="text" formControlName="cpf" placeholder="CPF">
+            </div>
+            <div class="field-group">
+              <label>RG</label>
+              <input type="text" formControlName="rg" placeholder="RG">
+            </div>
+          </div>
+
+          <div class="form-row grid-endereco">
+            <div class="field-group">
+              <label>Endereço</label>
+              <input type="text" formControlName="endereco">
+            </div>
+            <div class="field-group">
+              <label>Número</label>
+              <input type="text" formControlName="numero">
+            </div>
+            <div class="field-group">
+              <label>CEP</label>
+              <input type="text" formControlName="cep">
+            </div>
+          </div>
+
+          <div class="form-row grid-complemento">
+            <div class="field-group">
+              <label>Bairro</label>
+              <input type="text" formControlName="bairro">
+            </div>
+            <div class="field-group">
+              <label>Cidade</label>
+              <input type="text" formControlName="cidade">
+            </div>
+            <div class="field-group uf-field">
+              <label>UF</label>
+              <input type="text" formControlName="uf" maxlength="2">
+            </div>
+            <div class="field-group">
+              <label>Complemento</label>
+              <input type="text" formControlName="complemento" placeholder="Complemento">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group full-width">
+              <label>Observações</label>
+              <input type="text" formControlName="observacoes">
+            </div>
+          </div>
+
+          <div class="form-row grid-2">
+            <div class="field-group">
+              <label>E-mail</label>
+              <input type="email" formControlName="email">
+            </div>
+            <div class="field-group">
+              <label>Telefone</label>
+              <input type="text" formControlName="telefone">
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button type="button" class="btn btn-primary" (click)="gravar()">Gravar</button>
+            <button type="button" class="btn btn-primary" (click)="cancelar()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="excluir()">Excluir</button>
+            <button type="button" class="btn btn-primary" (click)="fechar()">Fechar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="listagem-container" *ngIf="abaAtiva === 'listagem'">
+        <table class="tabela-clientes">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>Documento</th>
+              <th>Telefone</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cli of clientesList">
+              <td>{{ cli.id }}</td>
+              <td>{{ cli.nome }}</td>
+              <td>{{ cli.tipoPessoa }}</td>
+              <td>{{ cli.cpf || cli.rg }}</td>
+              <td>{{ cli.telefone }}</td>
+              <td>
+                <button class="btn-editar" (click)="editarCliente(cli)">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <div *ngIf="clientesList.length === 0" class="mensagem-vazia">
+          Nenhum cliente cadastrado ou não foi possível conectar à API.
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

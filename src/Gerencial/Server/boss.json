@@ -1,0 +1,20 @@
+{
+	"name": "srvDelphiVerseERP",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"github.com/HashLoad/handle-exception": "^0.2.0",
+		"github.com/HashLoad/horse": "^3.2.0",
+		"github.com/HashLoad/horse-basic-auth": "^1.2.5",
+		"github.com/HashLoad/horse-compression": "^1.1.13",
+		"github.com/HashLoad/horse-logger": "^2.0.9",
+		"github.com/HashLoad/horse-octet-stream": "^1.9.12",
+		"github.com/HashLoad/jhonson": "^1.2.1",
+		"github.com/hashload/horse-cors": "^1.0.8",
+		"github.com/viniciussanchez/dataset-serialize": "^v2.5.9",
+		"github.com/weslleycapelari/horse-documentation": "^1.0.0"
+	}
+}

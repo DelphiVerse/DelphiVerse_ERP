@@ -1,0 +1,147 @@
+inherited frmCadastroPlanos: TfrmCadastroPlanos
+  Caption = 'Cadastro de Planos'
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited lytFundo: TLayout
+    inherited rctFundo: TRectangle
+      inherited lytTituloTela: TLayout
+        inherited rctTituloJanela: TRectangle
+          inherited lblTituloTela: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            Text = 'Cadastro de Planos'
+          end
+        end
+      end
+      inherited lytCentro: TLayout
+        inherited tbcCampos: TTabControl
+          Sizes = (
+            1012s
+            412s
+            1012s
+            412s)
+          inherited tbiCadastro: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiCadastro: TRectangle
+              inherited lytCamposCadastro: TLayout
+                object edtNome: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 6
+                  Position.X = 16.000000000000000000
+                  Position.Y = 32.000000000000000000
+                  Size.Width = 153.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lblNome: TLabel
+                  Position.X = 16.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Text = 'Nome do Plano'
+                  TabOrder = 7
+                end
+                object edtDescricao: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 4
+                  Position.X = 185.000000000000000000
+                  Position.Y = 32.000000000000000000
+                  Size.Width = 528.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lbl1: TLabel
+                  Position.X = 185.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Text = 'Descri'#231#227'o'
+                  TabOrder = 5
+                end
+                object edtValorBase: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 2
+                  Position.X = 728.000000000000000000
+                  Position.Y = 32.000000000000000000
+                end
+                object Label1: TLabel
+                  Position.X = 728.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Text = 'Valor Base'
+                  TabOrder = 3
+                end
+                object edtLimiteUsuarios: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 0
+                  Position.X = 16.000000000000000000
+                  Position.Y = 88.000000000000000000
+                end
+                object Label2: TLabel
+                  Position.X = 16.000000000000000000
+                  Position.Y = 72.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Limite de Usu'#225'rios'
+                  TabOrder = 1
+                end
+                object swtStatus: TSwitch
+                  IsChecked = True
+                  Position.X = 848.000000000000000000
+                  Position.Y = 32.000000000000000000
+                  Size.Width = 49.000000000000000000
+                  Size.Height = 24.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 8
+                end
+                object Label3: TLabel
+                  Position.X = 848.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Size.Width = 89.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Status'
+                  TabOrder = 9
+                end
+              end
+            end
+            inherited lytBotoes: TLayout
+              inherited rctBotoes: TRectangle
+                inherited lytBtnGravar: TLayout
+                  inherited rctBtnGravar: TRectangle
+                    inherited lblBtnGravar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnGravarClick
+                    end
+                  end
+                end
+                inherited lytBtnCancelar: TLayout
+                  inherited rctBtnCancelar: TRectangle
+                    inherited lblBtnCancelar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnCancelarClick
+                    end
+                  end
+                end
+                inherited lytBtnFechar: TLayout
+                  inherited rctBtnFechar: TRectangle
+                    inherited lblBtnFechar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+            end
+          end
+          inherited tbiListagem: TTabItem
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiListagem: TRectangle
+              inherited lstListagem: TListView
+                OnDblClick = lstListagemDblClick
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

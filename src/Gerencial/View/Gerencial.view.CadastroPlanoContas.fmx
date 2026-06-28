@@ -1,0 +1,134 @@
+inherited frmCadPlanoContas: TfrmCadPlanoContas
+  Caption = 'Cadastro de Plano de Contas'
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited lytFundo: TLayout
+    inherited rctFundo: TRectangle
+      inherited lytTituloTela: TLayout
+        inherited rctTituloJanela: TRectangle
+          inherited lblTituloTela: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            Text = 'Cadastro de Plano de Contas'
+          end
+        end
+      end
+      inherited lytCentro: TLayout
+        inherited tbcCampos: TTabControl
+          Sizes = (
+            1012s
+            412s
+            1012s
+            412s)
+          inherited tbiCadastro: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiCadastro: TRectangle
+              inherited lytCamposCadastro: TLayout
+                object edtNome: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 2
+                  Position.X = 8.000000000000000000
+                  Position.Y = 24.000000000000000000
+                  Size.Width = 277.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object lbl1: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 8.000000000000000000
+                  Text = 'Nome'
+                  TabOrder = 3
+                end
+                object swtStatus: TSwitch
+                  IsChecked = True
+                  Position.X = 304.000000000000000000
+                  Position.Y = 24.000000000000000000
+                  Size.Width = 53.000000000000000000
+                  Size.Height = 24.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 4
+                end
+                object lbl2: TLabel
+                  Position.X = 304.000000000000000000
+                  Position.Y = 8.000000000000000000
+                  Text = 'Status'
+                  TabOrder = 5
+                end
+                object lbl3: TLabel
+                  Position.X = 8.000000000000000000
+                  Position.Y = 64.000000000000000000
+                  Text = 'Tipo'
+                  TabOrder = 6
+                end
+                object cbbTipo: TComboBox
+                  Items.Strings = (
+                    'RECEITA'
+                    'DESPESA')
+                  Position.X = 8.000000000000000000
+                  Position.Y = 80.000000000000000000
+                  Size.Width = 129.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 7
+                end
+                object edtCodigoContabil: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 0
+                  Position.X = 145.000000000000000000
+                  Position.Y = 80.000000000000000000
+                  Size.Width = 140.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+                object Label1: TLabel
+                  Position.X = 145.000000000000000000
+                  Position.Y = 64.000000000000000000
+                  Text = 'C'#243'digo Cont'#225'bil'
+                  TabOrder = 1
+                end
+              end
+            end
+            inherited lytBotoes: TLayout
+              inherited rctBotoes: TRectangle
+                inherited lytBtnGravar: TLayout
+                  inherited rctBtnGravar: TRectangle
+                    inherited lblBtnGravar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnGravarClick
+                    end
+                  end
+                end
+                inherited lytBtnCancelar: TLayout
+                  inherited rctBtnCancelar: TRectangle
+                    inherited lblBtnCancelar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      OnClick = lblBtnCancelarClick
+                    end
+                  end
+                end
+                inherited lytBtnFechar: TLayout
+                  inherited rctBtnFechar: TRectangle
+                    inherited lblBtnFechar: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+            end
+          end
+          inherited tbiListagem: TTabItem
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited rctTbiListagem: TRectangle
+              inherited lstListagem: TListView
+                OnDblClick = lstListagemDblClick
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

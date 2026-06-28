@@ -1,0 +1,239 @@
+/* Layout Principal */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #314b91;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.logo-area {
+  padding: 20px;
+  text-align: center;
+  background-color: #20336b;
+}
+.logo {
+  max-width: 150px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.menu-item {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu-item.active {
+  background-color: #008cd6;
+  border-radius: 4px;
+}
+
+/* Main Content & Topbar */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  background-color: #314b91;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Content Area */
+.content-area {
+  background-color: white;
+  margin: 0;
+  flex: 1;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.content-header {
+  background-color: #314b91;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.content-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Abas */
+.tabs {
+  padding: 20px 30px 0 30px;
+}
+.tabs button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-right: -1px;
+}
+.tabs button.active {
+  background-color: white;
+  border-bottom: 2px solid white;
+}
+
+/* Formulário e Grids */
+.form-container {
+  padding: 30px;
+}
+.form-row {
+  margin-bottom: 15px;
+}
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+.field-group label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+input, select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: #008cd6;
+}
+
+/* Grids Específicos */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-docs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.grid-endereco { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; }
+.grid-complemento { display: grid; grid-template-columns: 1fr 1fr 60px 1fr; gap: 20px; }
+.full-width { width: 100%; }
+
+/* Status Toggle e ID */
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.id-field span { font-weight: bold; }
+
+/* Toggle Switch (CSS nativo) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .slider { background-color: #008cd6; }
+input:checked + .slider:before { transform: translateX(20px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+/* Botões */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 50px;
+}
+.btn-primary {
+  background-color: #1a7bd6;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.btn-primary:hover {
+  background-color: #1562ad;
+}
+
+/* Tabela de Listagem */
+.tabela-clientes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.tabela-clientes th,
+.tabela-clientes td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela-clientes th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabela-clientes tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.tabela-clientes tr:hover {
+  background-color: #f1f7fd;
+}
+
+/* Botão de Editar na Tabela */
+.btn-editar {
+  background-color: #008cd6;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.btn-editar:hover {
+  background-color: #006da8;
+}
+
+/* Mensagem de Lista Vazia */
+.mensagem-vazia {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}

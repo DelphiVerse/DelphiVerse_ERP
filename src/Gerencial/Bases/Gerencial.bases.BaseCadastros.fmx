@@ -1,0 +1,273 @@
+object frmBaseCadastros: TfrmBaseCadastros
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = None
+  Caption = 'Form1'
+  ClientHeight = 588
+  ClientWidth = 1112
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lytFundo: TLayout
+    Align = Client
+    Size.Width = 1112.000000000000000000
+    Size.Height = 588.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctFundo: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 1112.000000000000000000
+      Size.Height = 588.000000000000000000
+      Size.PlatformDefault = False
+      object lytTituloTela: TLayout
+        Align = Top
+        Size.Width = 1112.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object rctTituloJanela: TRectangle
+          Align = Client
+          Fill.Color = xFF5A0001
+          Size.Width = 1112.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblTituloTela: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 1112.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'lblTituloTela'
+            TabOrder = 0
+          end
+        end
+      end
+      object lytCentro: TLayout
+        Align = Client
+        Margins.Left = 50.000000000000000000
+        Margins.Top = 50.000000000000000000
+        Margins.Right = 50.000000000000000000
+        Margins.Bottom = 50.000000000000000000
+        Size.Width = 1012.000000000000000000
+        Size.Height = 438.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object tbcCampos: TTabControl
+          Align = Client
+          Size.Width = 1012.000000000000000000
+          Size.Height = 438.000000000000000000
+          Size.PlatformDefault = False
+          TabIndex = 0
+          TabOrder = 0
+          TabPosition = Top
+          Sizes = (
+            1012s
+            412s
+            1012s
+            412s)
+          object tbiCadastro: TTabItem
+            CustomIcon = <
+              item
+              end>
+            TextSettings.Trimming = None
+            IsSelected = True
+            Size.Width = 67.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'Cadastro'
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            object rctTbiCadastro: TRectangle
+              Align = Client
+              Fill.Color = claWhite
+              Size.Width = 1012.000000000000000000
+              Size.Height = 362.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              object lytCamposCadastro: TLayout
+                Align = Client
+                Margins.Left = 30.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Right = 30.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Size.Width = 952.000000000000000000
+                Size.Height = 322.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+            object lytBotoes: TLayout
+              Align = Bottom
+              Position.Y = 362.000000000000000000
+              Size.Width = 1012.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object rctBotoes: TRectangle
+                Align = Client
+                Fill.Color = claWhite
+                Size.Width = 1012.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                object lytBtnGravar: TLayout
+                  Align = Left
+                  Margins.Left = 5.000000000000000000
+                  Margins.Top = 5.000000000000000000
+                  Margins.Bottom = 5.000000000000000000
+                  Position.X = 5.000000000000000000
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  object rctBtnGravar: TRectangle
+                    Align = Client
+                    Fill.Color = xFF5A0001
+                    Size.Width = 100.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Kind = None
+                    XRadius = 10.000000000000000000
+                    YRadius = 10.000000000000000000
+                    object lblBtnGravar: TLabel
+                      Align = Client
+                      StyledSettings = [Family]
+                      HitTest = True
+                      Size.Width = 100.000000000000000000
+                      Size.Height = 40.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 15.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      TextSettings.FontColor = claWhite
+                      TextSettings.HorzAlign = Center
+                      Text = 'Gravar'
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object lytBtnCancelar: TLayout
+                  Align = Left
+                  Margins.Left = 5.000000000000000000
+                  Margins.Top = 5.000000000000000000
+                  Margins.Bottom = 5.000000000000000000
+                  Position.X = 110.000000000000000000
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object rctBtnCancelar: TRectangle
+                    Align = Client
+                    Fill.Color = claWhite
+                    Size.Width = 100.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF5A0001
+                    XRadius = 10.000000000000000000
+                    YRadius = 10.000000000000000000
+                    object lblBtnCancelar: TLabel
+                      Align = Client
+                      StyledSettings = [Family]
+                      HitTest = True
+                      Size.Width = 100.000000000000000000
+                      Size.Height = 40.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 15.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      TextSettings.FontColor = xFF5A0001
+                      TextSettings.HorzAlign = Center
+                      Text = 'Cancelar'
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object lytBtnFechar: TLayout
+                  Align = Left
+                  Margins.Left = 5.000000000000000000
+                  Margins.Top = 5.000000000000000000
+                  Margins.Bottom = 5.000000000000000000
+                  Position.X = 215.000000000000000000
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object rctBtnFechar: TRectangle
+                    Align = Client
+                    Fill.Color = claWhite
+                    Size.Width = 100.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF5A0001
+                    XRadius = 10.000000000000000000
+                    YRadius = 10.000000000000000000
+                    object lblBtnFechar: TLabel
+                      Align = Client
+                      StyledSettings = [Family]
+                      HitTest = True
+                      Size.Width = 100.000000000000000000
+                      Size.Height = 40.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 15.000000000000000000
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      TextSettings.FontColor = xFF5A0001
+                      TextSettings.HorzAlign = Center
+                      Text = 'Fechar'
+                      TabOrder = 0
+                      OnClick = lblBtnFecharClick
+                    end
+                  end
+                end
+              end
+            end
+          end
+          object tbiListagem: TTabItem
+            CustomIcon = <
+              item
+              end>
+            TextSettings.Trimming = None
+            IsSelected = False
+            Size.Width = 68.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'Listagem'
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            object rctTbiListagem: TRectangle
+              Align = Client
+              Fill.Color = claWhite
+              Size.Width = 1012.000000000000000000
+              Size.Height = 412.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              object lstListagem: TListView
+                ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+                ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+                HeaderAppearanceClassName = 'TListHeaderObjects'
+                FooterAppearanceClassName = 'TListHeaderObjects'
+                Align = Client
+                Size.Width = 1012.000000000000000000
+                Size.Height = 412.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                SearchVisible = True
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
